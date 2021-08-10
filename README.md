@@ -17,3 +17,7 @@ Here you'll find the source code for [carlislestudentproperties.com](https://www
 * __Usability__ - this website features a navigation bar, consistent across all pages, which contains a drop-down list. 
 * __SEO friendly__ - optimised by design for search engine compatibility, this website and the associated business entity appear in Google search results.
 * __Deployment__ - DeployHQ is used to automatically pull from GitHub and upload to the web server whenever I push commits to this repository.
+
+## Further Details
+
+* A Client Side Include ([source](https://github.com/LexmarkWeb/csi.js)) is used by each page to load the navigation bar. This was included to reduce code repetition, as the navigation bar is the same on every page of the website. 
