@@ -1,0 +1,19 @@
+//Bootstrap breakpoints
+$bootstrap-sm: 576px;
+$bootstrap-md: 768px;
+$bootstrap-lg: 992px;
+$bootstrap-xl: 1200px;
+
+//Custom colours
+#lightbgcolor {background-color: #edf6ff}
+#darkbgcolor {background-color: #002e63}
+
+//Enable property images to take up more of the screen on moblie
+#prop-image div img {
+  object-fit: cover;
+  @media (max-width: $bootstrap-sm) {height: 80vw;}
+  @media (min-width: $bootstrap-sm) {height: 409px;}
+  @media (min-width: $bootstrap-md) {height: 523px;}
+  @media (min-width: $bootstrap-lg) {height: 701px;}
+  @media (min-width: $bootstrap-xl) {height: 837px;}
+}

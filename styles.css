@@ -1,3 +1,38 @@
-#lightbgcolor {background-color: #edf6ff}
+#lightbgcolor {
+  background-color: #edf6ff;
+}
 
-#darkbgcolor {background-color: #002e63}
+#darkbgcolor {
+  background-color: #002e63;
+}
+
+#prop-image div img {
+  object-fit: cover;
+}
+@media (max-width: 576px) {
+  #prop-image div img {
+    height: 80vw;
+  }
+}
+@media (min-width: 576px) {
+  #prop-image div img {
+    height: 409px;
+  }
+}
+@media (min-width: 768px) {
+  #prop-image div img {
+    height: 523px;
+  }
+}
+@media (min-width: 992px) {
+  #prop-image div img {
+    height: 701px;
+  }
+}
+@media (min-width: 1200px) {
+  #prop-image div img {
+    height: 837px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
