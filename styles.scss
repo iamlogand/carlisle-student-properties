@@ -8,12 +8,25 @@ $bootstrap-xl: 1200px;
 #lightbgcolor {background-color: #edf6ff}
 #darkbgcolor {background-color: #002e63}
 
-//Enable property images to take up more of the screen on moblie
+//Property image responsive cropping
 #prop-image div img {
   object-fit: cover;
   @media (max-width: $bootstrap-sm) {height: 80vw;}
-  @media (min-width: $bootstrap-sm) {height: 409px;}
-  @media (min-width: $bootstrap-md) {height: 523px;}
-  @media (min-width: $bootstrap-lg) {height: 701px;}
-  @media (min-width: $bootstrap-xl) {height: 837px;}
+  @media (min-width: $bootstrap-sm) {height: 409px}
+  @media (min-width: $bootstrap-md) {height: 523px}
+  @media (min-width: $bootstrap-lg) {height: 701px}
+  @media (min-width: $bootstrap-xl) {height: 837px}
+}
+
+//Property image background and radius
+#prop-image {
+  background-color: gray;
+  @media (min-width: $bootstrap-sm) {border-radius: 4px}
+}
+
+//Override carousel transition speed
+.carousel-inner .carousel-item {
+  transition: -webkit-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
 }

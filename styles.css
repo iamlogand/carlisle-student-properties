@@ -35,4 +35,19 @@
   }
 }
 
+#prop-image {
+  background-color: gray;
+}
+@media (min-width: 576px) {
+  #prop-image {
+    border-radius: 4px;
+  }
+}
+
+.carousel-inner .carousel-item {
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
 /*# sourceMappingURL=styles.css.map */
