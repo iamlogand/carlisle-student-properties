@@ -11,7 +11,7 @@
 }
 @media (max-width: 576px) {
   #prop-image div img {
-    height: 80vw;
+    height: 85vw;
   }
 }
 @media (min-width: 576px) {
