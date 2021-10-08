@@ -1,12 +1,17 @@
 //Bootstrap breakpoints
+$tiny-display: 370px;
 $bootstrap-sm: 576px;
 $bootstrap-md: 768px;
 $bootstrap-lg: 992px;
 $bootstrap-xl: 1200px;
 
+//Colours
+$light-brand-blue: #edf6ff;
+$dark-brand-blue: #002e63;
+
 //Custom colours
-#lightbgcolor {background-color: #edf6ff}
-#darkbgcolor {background-color: #002e63}
+#lightbgcolour {background-color: $light-brand-blue}
+#darkbgcolour {background-color: $dark-brand-blue}
 
 //Property image responsive cropping
 #prop-image div img {
@@ -18,9 +23,10 @@ $bootstrap-xl: 1200px;
   @media (min-width: $bootstrap-xl) {height: 837px}
 }
 
-//Property image background and radius
+//Property image shadow, background and borders
 #prop-image {
-  background-color: gray;
+  box-shadow: 0px 0px 6px -1px silver;
+  background-color: $light-brand-blue;
   @media (min-width: $bootstrap-sm) {border-radius: 4px}
 }
 
@@ -30,3 +36,25 @@ $bootstrap-xl: 1200px;
   transition: transform .3s ease;
   transition: transform .3s ease, -webkit-transform .3s ease;
 }
+
+//Property card responsive cropping
+#prop-primary-image {
+  object-fit: cover;
+  @media (max-width: $bootstrap-sm) {height: 80vw;}
+  @media (min-width: $bootstrap-sm) {height: 236px}
+  @media (min-width: $bootstrap-md) {height: 326px}
+  @media (min-width: $bootstrap-lg) {height: 286px}
+  @media (min-width: $bootstrap-xl) {height: 346px}
+}
+
+//Brand resizing for tiny devices
+#brand {
+  @media (max-width: $tiny-display) {font-size: 15px}
+}
+
+//Announcement title resizing for small devices
+#announcement h1 {
+  @media (max-width: $bootstrap-sm) {font-size: 38px}
+}
+
+//Preferred break

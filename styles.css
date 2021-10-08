@@ -1,8 +1,8 @@
-#lightbgcolor {
+#lightbgcolour {
   background-color: #edf6ff;
 }
 
-#darkbgcolor {
+#darkbgcolour {
   background-color: #002e63;
 }
 
@@ -36,7 +36,8 @@
 }
 
 #prop-image {
-  background-color: gray;
+  box-shadow: 0px 0px 6px -1px silver;
+  background-color: #edf6ff;
 }
 @media (min-width: 576px) {
   #prop-image {
@@ -48,6 +49,47 @@
   transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+#prop-primary-image {
+  object-fit: cover;
+}
+@media (max-width: 576px) {
+  #prop-primary-image {
+    height: 80vw;
+  }
+}
+@media (min-width: 576px) {
+  #prop-primary-image {
+    height: 236px;
+  }
+}
+@media (min-width: 768px) {
+  #prop-primary-image {
+    height: 326px;
+  }
+}
+@media (min-width: 992px) {
+  #prop-primary-image {
+    height: 286px;
+  }
+}
+@media (min-width: 1200px) {
+  #prop-primary-image {
+    height: 346px;
+  }
+}
+
+@media (max-width: 370px) {
+  #brand {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  #announcement h1 {
+    font-size: 38px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
