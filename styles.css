@@ -1,8 +1,8 @@
-#lightbgcolour {
+.lightbgcolour {
   background-color: #edf6ff;
 }
 
-#darkbgcolour {
+.darkbgcolour {
   background-color: #002e63;
 }
 
@@ -51,31 +51,31 @@
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
-#prop-primary-image {
+.prop-primary-image {
   object-fit: cover;
 }
 @media (max-width: 576px) {
-  #prop-primary-image {
+  .prop-primary-image {
     height: 80vw;
   }
 }
 @media (min-width: 576px) {
-  #prop-primary-image {
+  .prop-primary-image {
     height: 236px;
   }
 }
 @media (min-width: 768px) {
-  #prop-primary-image {
+  .prop-primary-image {
     height: 326px;
   }
 }
 @media (min-width: 992px) {
-  #prop-primary-image {
+  .prop-primary-image {
     height: 286px;
   }
 }
 @media (min-width: 1200px) {
-  #prop-primary-image {
+  .prop-primary-image {
     height: 346px;
   }
 }
@@ -90,6 +90,10 @@
   #announcement h1 {
     font-size: 38px;
   }
+}
+
+#custom-ar {
+  padding-bottom: 177.77%;
 }
 
 /*# sourceMappingURL=styles.css.map */

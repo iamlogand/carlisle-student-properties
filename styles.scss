@@ -10,8 +10,8 @@ $light-brand-blue: #edf6ff;
 $dark-brand-blue: #002e63;
 
 //Custom colours
-#lightbgcolour {background-color: $light-brand-blue}
-#darkbgcolour {background-color: $dark-brand-blue}
+.lightbgcolour {background-color: $light-brand-blue}
+.darkbgcolour {background-color: $dark-brand-blue}
 
 //Property image responsive cropping
 #prop-image div img {
@@ -38,7 +38,7 @@ $dark-brand-blue: #002e63;
 }
 
 //Property card responsive cropping
-#prop-primary-image {
+.prop-primary-image {
   object-fit: cover;
   @media (max-width: $bootstrap-sm) {height: 80vw;}
   @media (min-width: $bootstrap-sm) {height: 236px}
@@ -57,4 +57,6 @@ $dark-brand-blue: #002e63;
   @media (max-width: $bootstrap-sm) {font-size: 38px}
 }
 
-//Preferred break
+#custom-ar {
+  padding-bottom: 177.77%;
+}
