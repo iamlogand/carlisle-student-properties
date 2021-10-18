@@ -7,8 +7,8 @@
     $message = $_POST['message'];
 
     $email_from = 'carlislestudentproperties@gmail.com';
-	$email_subject = "New Arrange Viewing Request";
-	$email_body = "Name $name.\n".
+	$email_subject = "Online Viewing Request";
+	$email_body = "Name: $name\n".
 	    "Email: $visitor_email\n".
 	    "Phone: $phone\n".
 	    "Number of properties: $properties\n".
