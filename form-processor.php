@@ -20,7 +20,7 @@
     $headers = "From: $email_from \r\n";
     $headers .= "Reply-To: $visitor_email \r\n";
     mail($to,$email_subject,$email_body,$headers);
-
+    echo '<script type="text/javascript">move();</script>';
 ?>
 <script language="JavaScript">
     function move() {
