@@ -6,7 +6,7 @@
     $group = $_POST['group'];
     $message = $_POST['message'];
 
-    $email_from = 'carlislestudentproperties@gmail.com';
+    $email_from = 'anyone@email.com';
 	$email_subject = "Online Viewing Request";
 	$email_body = "Name: $name\n".
 	    "Email: $visitor_email\n".
