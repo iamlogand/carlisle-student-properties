@@ -6,16 +6,17 @@
     $group = $_POST['group'];
     $message = $_POST['message'];
 
-    $email_from = 'website@carlislestudentproperties.co.uk';
-	$email_subject = "Online Viewing Request";
-	$email_body = "Name:  $name\n\n".
-	    "Email:  $visitor_email\n\n".
-	    "Phone:  $phone\n\n".
-	    "Properties:  $properties\n\n".
-	    "Group size:  $group\n\n".
+    $email_from = 'carlislestudentproperties@gmail.com';
+	$email_subject = "New Arrange Viewing Request";
+	$email_body = "Name $name.\n".
+	    "Email: $visitor_email\n".
+	    "Phone: $phone\n".
+	    "Number of properties: $properties\n".
+	    "Group size: $group\n".
         "Message:\n$message\n";
 
-    $to = "carlislestudentproperties@aol.co.uk";
+
+    $to = "iamlogandavidson@gmail.com";
     $headers = "From: $email_from \r\n";
     $headers .= "Reply-To: $visitor_email \r\n";
     mail($to,$email_subject,$email_body,$headers);
