@@ -1,10 +1,10 @@
 <?php
-    $name = $_POST['name'];
-    $visitor_email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $properties = $_POST['properties'];
-    $group = $_POST['group'];
-    $message = $_POST['message'];
+    $name = test_input($_POST['name']);
+    $visitor_email = test_input($_POST['email']);
+    $phone = test_input($_POST['phone']);
+    $properties = test_input($_POST['properties']);
+    $group = test_input($_POST['group']);
+    $message = test_input($_POST['message']);
 
     $email_from = 'website@carlislestudentproperties.co.uk';
 	$email_subject = "Online Viewing Request";
@@ -15,6 +15,7 @@
 	    "Group size: $group\n".
         "Message:\n$message\n";
 
+// Send email to carlislestudentproperties@aol.co.uk
     $to = "carlislestudentproperties@aol.co.uk";
     $headers = "From: $email_from \r\n";
     $headers .= "Reply-To: $visitor_email \r\n";
@@ -23,4 +24,11 @@
         'location.href = "index.html";',
         '</script>'
     ;
+
+    function test_input($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
 ?>

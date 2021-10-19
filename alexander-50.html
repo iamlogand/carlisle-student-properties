@@ -111,6 +111,21 @@
             </a>
         </div>
     </div>
+<!--    Buttons-->
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-6 mt-2">
+                <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#video-modal">
+                    Video Tour
+                </button>
+            </div>
+            <div class="col-12 col-sm-6 mt-2">
+                <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#viewing-modal">
+                    Arrange Viewing
+                </button>
+            </div>
+        </div>
+    </div>
 <!--    Info-->
     <div class="container mt-3">
 <!--        <h3>50 Alexander Street CA1 2LH</h3>  -->
@@ -146,7 +161,7 @@
 			Launch Video Tour
 		</button>
     </div>
-<!-- Video Modal -->
+<!--    Video Modal-->
 	<div class="modal fade" id="video-modal" tabindex="-1" role="dialog" aria-labelledby="video-modalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered modal-lg">
 			<div class="modal-content">
@@ -162,6 +177,71 @@
 						</iframe>
 					</div>
 				</div>
+			</div>
+		</div>
+	</div>
+<!--    Viewing Modal-->
+	<div class="modal fade" id="viewing-modal" tabindex="-1" role="dialog" aria-labelledby="viewing-modalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Arrange Viewing</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form method="post" action="form-processor.php" autocomplete="on">
+                    <div class="modal-body">
+                        <div class="form-group row">
+                            <label for="inputName" class="col-sm-4 col-form-label">
+                                Name <span style="color: red">*</span>
+                            </label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="inputName" name="name" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputEmail" class="col-sm-4 col-form-label">
+                                Email address <span style="color: red">*</span>
+                            </label>
+                            <div class="col-sm-8">
+                                <input type="email" class="form-control" id="inputEmail" name="email" placeholder="name@example.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputPhoneNumber" class="col-sm-4 col-form-label">Phone number</label>
+                            <div class="col-sm-8">
+                                <input type="tel" class="form-control" id="inputPhoneNumber" name="phone">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <label for="inputProperties">Properties to view</label>
+                                <input type="text" class="form-control" id="inputProperties" name="properties" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputGroupSize">Group size</label>
+                                <select class="form-control" id="inputGroupSize" name="group">
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                        </div>
+                        <div>
+                            <label for="inputMessage">
+                                Message <span style="color: red">*</span>
+                            </label>
+                            <textarea class="form-control" id="inputMessage" name="message" rows="3" required></textarea>
+                        </div>
+                        <div>
+                            <p class="mt-2 mb-0" style="color: red"><small>* required fields</small></p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
 			</div>
 		</div>
 	</div>
