@@ -17,7 +17,7 @@
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-192896830-1"></script>
 	<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-192896830-1'); </script>
 <!--    Google reCAPTCHA-->
-<!--test-->
+    <script src='https://www.google.com/recaptcha/api.js?render=6LfV6pIdAAAAAK8-djX_oOXhzAKStbRhcWT5rKQe'></script>
 <!--	Local scripts-->
 	<script src="script.js"></script>
 <!--    Tracking-->
@@ -207,7 +207,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form method="post" action="form-processor.php" autocomplete="on">
+                <form method="post" action="form-processor.php" autocomplete="on" id="demo-form">
                     <div class="modal-body">
                         <div class="form-group row">
                             <label for="inputName" class="col-sm-4 col-form-label">
@@ -256,7 +256,8 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response" />
+                        <input type="submit" class="btn btn-primary" value="Submit" />
                     </div>
                 </form>
 			</div>
@@ -290,6 +291,15 @@
     </div>
 <!--    HTML include-->
 	<script>includeHTML();</script>
+<!--    reCAPTCHA script-->
+	<script>
+        grecaptcha.ready(function() {
+            grecaptcha.execute('6LfV6pIdAAAAAK8-djX_oOXhzAKStbRhcWT5rKQe', {action: 'homepage'})
+            .then(function(token) {
+                document.getElementById('g-recaptcha-response').value=token;
+            });
+        });
+    </script>
 <!--    jQuery, Popper, Bootstrap, includeHTML-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
