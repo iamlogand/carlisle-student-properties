@@ -17,6 +17,8 @@
 
 // Send email to carlislestudentproperties@aol.co.uk
     $to = "carlislestudentproperties@aol.co.uk, carlislestudentproperties@gmail.com";
+// Only send email to my admin email address
+//     $to = "carlislestudentproperties@gmail.com";
     $headers = "From: $email_from \r\n";
     $headers .= "Reply-To: $visitor_email \r\n";
     mail($to,$email_subject,$email_body,$headers);
