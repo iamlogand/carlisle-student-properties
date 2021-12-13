@@ -28,6 +28,18 @@
 <!--    Navigation Bar-->
     <div w3-include-html="includes/navbar.html"></div>
 	<br><br>
+<!--    Viewing Request Form Completion Feedback-->
+    <div class="container" id="form-feedback">
+        <div class="row mb-3">
+            <div class="col-12 col-sm-1"></div>
+            <div class="col-12 col-sm-10 text-center">
+                <div class="alert alert-success mt-4 mb-0" role="alert">
+                    <h4 class="alert-heading">Request received - thank you!</h4>
+                    <p>Thanks for submitting a viewing request. Jane will contact you soon to arrange a viewing for you.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 <!--    Announcement Header-->
     <div class="jumbotron mt-0 mb-0 py-4">
         <div class="container" id="announcement">
@@ -301,6 +313,13 @@
                 document.getElementById('request-page').value='home page';
             });
         });
+    </script>
+<!--    Viewing request form completion feedback visibility control--->
+    <script>
+        var feedbackElem = document.getElementById('form-feedback');
+        if (window.location.search.substr(1) !== 'vr=1') {
+            feedbackElem.style.display = 'none';
+        }
     </script>
 <!--    jQuery, Popper, Bootstrap, includeHTML-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
