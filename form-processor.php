@@ -92,7 +92,6 @@
 
     // Send email
     $header = "Reply-To: $visitor_email \r\n";
-    $to = "carlislestudentproperties@gmail.com";
     mail($to,$email_subject,$email_body,$header);
 
     // Navigate to homepage
