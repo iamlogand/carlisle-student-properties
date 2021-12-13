@@ -207,6 +207,7 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response" />
+                        <input type="hidden" id="request-page" name="request-page" />
                         <input type="submit" class="btn btn-primary" value="Submit" />
                     </div>
                 </form>
@@ -249,6 +250,7 @@
             grecaptcha.execute('6LfV6pIdAAAAAK8-djX_oOXhzAKStbRhcWT5rKQe', {action: 'homepage'})
             .then(function(token) {
                 document.getElementById('g-recaptcha-response').value=token;
+                document.getElementById('request-page').value='42 Bowman page';
             });
         });
     </script>

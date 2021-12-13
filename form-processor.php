@@ -1,51 +1,101 @@
 <?php
-    if (!empty($_POST)) {
 
-        function test_input($data) {
+    // Function that cleans input to prevent XSS
+    function test_input($data) {
             $data = trim($data);
             $data = stripslashes($data);
             $data = htmlspecialchars($data);
             return $data;
         }
 
-        $name = test_input($_POST['name']);
-        $visitor_email = test_input($_POST['email']);
-        $phone = test_input($_POST['phone']);
-        $properties = test_input($_POST['properties']);
-        $group = test_input($_POST['group']);
-        $message = test_input($_POST['message']);
+    $score = null;
 
+    // Check if form data is received
+    if (!empty($_POST)) { // Form data received
+
+        // Check if form data contains token
         $token = $_POST['g-recaptcha-response'];
-        $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LfV6pIdAAAAAIyFiEx9peDk0KlvpXjs1I8HV9cE&response={$token}");
-        $result = json_decode($response);
-        $score = $result->score;
+        if (!empty($token)) { // Token received
 
-        $email_from = 'website@carlislestudentproperties.co.uk';
-        $email_subject = "Online Viewing Request";
-        $email_body = "Name: $name\n".
-            "Email: $visitor_email\n".
-            "Phone: $phone\n".
-            "Number of properties: $properties\n".
-            "Group size: $group\n".
-            "Message:\n$message\n\n".
-            "CAPTCHA Report\nScore: $score\n".
-            "1.0 is very likely a good interaction, 0.0 is very likely a bot.\n".
-            "Scores below 0.5 are automatically rejected.\n";
+            // Check for token
+            $token = $_POST['g-recaptcha-response'];
+            $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LfV6pIdAAAAAIyFiEx9peDk0KlvpXjs1I8HV9cE&response={$token}");
+            $result = json_decode($response);
 
-//         If name is 'ADMIN' or score is low, send request email to dev/testing address, otherwise, send to both
-        if ($name == 'ADMIN' || $score < 0.5) {
-            $to = "carlislestudentproperties@gmail.com";
-        } else {
-            $to = "carlislestudentproperties@aol.co.uk, carlislestudentproperties@gmail.com";
-        };
+            // Check if token is valid
+            if ($result->success) { // Token is valid
 
-        $headers = "From: $email_from \r\n";
-        $headers .= "Reply-To: $visitor_email \r\n";
-        mail($to,$email_subject,$email_body,$headers);
-        echo '<script type="text/javascript">',
-            'location.href = "index.html";',
-            '</script>'
-        ;
+                // Find score
+                $score = (isset($result->score)) ? $result->score : false;
 
+                // Check if score is high enough
+                if ($score >= 0.5) { // Score is 0.5 or over - likely to be genuine
+                    $genuine_request = true;
+
+                } else { // Score is below 0.5 - not likely to be genuine
+                    $genuine_request = false;
+                    $report = "CAPTCHA score is below 0.5.";
+                }
+
+            } else { // Token is invalid
+                $genuine_request = false;
+                $report = "CAPTCHA token is invalid.";
+            }
+
+        } else { // Token not received
+            $genuine_request = false;
+            $report = "No CAPTCHA token.";
+        }
+
+    } else { // Form data not received
+        $genuine_request = false;
+        $report = "No form data.";
     }
+
+    // Generate email content
+    if ($genuine_request) { // Viewing request is genuine
+        $to = "carlislestudentproperties@aol.co.uk, carlislestudentproperties@gmail.com";
+        $email_subject = "Website Viewing Request";
+        $email_body = null;
+
+    } else { // Viewing request is unlikely to be genuine
+        $to = "carlislestudentproperties@gmail.com";
+        $email_subject = "CSP Non-Genuine Viewing Request";
+        $email_body = "Report: $report\n\nForm content (if any):\n\n";
+    }
+
+    // Get form data from POST request
+    $name = test_input(isset($_POST['name']) ? $_POST['name'] : null);
+    $visitor_email = test_input(isset($_POST['email']) ? $_POST['email'] : null);
+    $phone = test_input(isset($_POST['phone']) ? $_POST['phone'] : null);
+    $properties = test_input(isset($_POST['properties']) ? $_POST['properties'] : null);
+    $group = test_input(isset($_POST['group']) ? $_POST['group'] : null);
+    $message = test_input(isset($_POST['message']) ? $_POST['message'] : null);
+    $source_page = test_input(isset($_POST['request-page']) ? $_POST['request-page'] : null);
+
+    // For a test, only send to admin, and label email as a 'TEST'
+    // When testing the Viewing Request form, put 'admin' as the name
+    if ($name == 'admin') {
+        $to = "carlislestudentproperties@gmail.com";
+        $email_subject = "TEST " . $email_subject;
+    }
+
+    // Put form data into email body
+    $email_body .= "Score: $score\n".
+        "Request made from: $source_page\n\n".
+        "Name: $name\n".
+        "Email: $visitor_email\n".
+        "Phone: $phone\n".
+        "Number of properties: $properties\n".
+        "Group size: $group\n".
+        "Message:\n$message\n";
+
+    // Send email
+    $header = "Reply-To: $visitor_email \r\n";
+    $to = "carlislestudentproperties@gmail.com";
+    mail($to,$email_subject,$email_body,$header);
+
+    // Navigate to homepage
+    echo '<script type="text/javascript">', 'location.href = "index.html?vr=1";', '</script>';
+
 ?>
