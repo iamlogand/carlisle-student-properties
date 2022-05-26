@@ -54,12 +54,12 @@
 
     // Generate email content
     if ($genuine_request) { // Viewing request is genuine
-        $to = "carlislestudentproperties@aol.co.uk, carlislestudentproperties@gmail.com";
+        $to = "carlislestudentproperties@aol.co.uk";
         $email_subject = "Website Viewing Request";
         $email_body = null;
 
     } else { // Viewing request is unlikely to be genuine
-        $to = "carlislestudentproperties@gmail.com";
+        $to = "carlislestudentproperties@aol.co.uk";
         $email_subject = "CSP Non-Genuine Viewing Request";
         $email_body = "Report: $report\n\nForm content (if any):\n\n";
     }
