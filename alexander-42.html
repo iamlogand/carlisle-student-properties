@@ -26,7 +26,7 @@
 </head>
 <body>
 <!--    Navigation Bar-->
-    <div id="nav_bar_container"></div>
+    <div w3-include-html="includes/navbar.html"></div>
     <br><br>
 <!--    Announcement Header-->
     <div w3-include-html="includes/prop-announcement-header.html"></div>
@@ -217,18 +217,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Load React. -->
-    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
-    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
-
-    <!-- Load Babel for React -->
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-
-    <!-- Load our React component. -->
-    <script type="text/babel" src="components/nav_bar.js"></script>
-    
 <!--    HTML include-->
 	<script>includeHTML();</script>
 <!--    reCAPTCHA script-->
