@@ -23,6 +23,9 @@
 <!--    Tracking-->
     <script type="text/javascript">(function(){var hstc=document.createElement('script'); hstc.src='https://log.hitsteps.net/track.php?code=f1a5bb9d02c0ffc6dd3f005f351540d3';hstc.async=true;var htssc = document.getElementsByTagName('script')[0];htssc.parentNode.insertBefore(hstc, htssc);})();
     </script><noscript><a href="http://www.hitsteps.com/"><img src="//log.hitsteps.net/track.php?mode=img&amp;code=f1a5bb9d02c0ffc6dd3f005f351540d3" alt="visitor activity tracker" width="1" height="1" />blog tracking</a></noscript>
+<!-- Google Maps -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script type="module" src="./map_script.js"></script>
 </head>
 <body>
 <!--    Navigation Bar-->
@@ -129,6 +132,13 @@
 			<li class="list-group-item"><i class="fas fa-check"></i>&nbsp; Free on street parking</li>
 			<li class="list-group-item"><i class="fas fa-check"></i>&nbsp; Within 5 minutes walking distance to Fusehill Street Campus, supermarkets, bars, restaurants & takeaways</li>
 		</ul>
+        <h3>Map</h3>
+        <!--The div element for the map -->
+        <div id="map" style="width: 400px; height: 400px; background-color: gray"></div>
+
+        <!-- prettier-ignore -->
+        <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+            ({key: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg", v: "weekly"});</script>
 	</div>
 <!--    Video Modal-->
 	<div class="modal fade" id="video-modal" tabindex="-1" role="dialog" aria-labelledby="video-modalLabel" aria-hidden="true">
