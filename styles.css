@@ -92,4 +92,24 @@
   }
 }
 
+.home-page-map {
+  min-height: 400px;
+  height: auto;
+}
+
+.home-page-map>div {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.home-page-cards>div>div>a {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-page-cards>div>div>a>.card-body {
+  flex: 1 1 auto;
+}
+
 /*# sourceMappingURL=styles.css.map */
