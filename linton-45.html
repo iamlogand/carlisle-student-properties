@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!--    Title, icon, meta-->
+    <!-- Title, icon, meta-->
     <title>Student Accommodation in Carlisle - 45 Linton Street</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <meta charset="utf-8" />
@@ -17,7 +17,7 @@
       name="keywords"
       content="carlisle, student, properties, accommodation, houses"
     />
-    <!--    Styles-->
+    <!-- Styles-->
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="bootstrap-4.6.0/dist/css/bootstrap.min.css" />
     <!--	Tick characters-->
@@ -38,11 +38,11 @@
       gtag("js", new Date());
       gtag("config", "UA-192896830-1");
     </script>
-    <!--    Google reCAPTCHA-->
+    <!-- Google reCAPTCHA-->
     <script src="https://www.google.com/recaptcha/api.js?render=6LfV6pIdAAAAAK8-djX_oOXhzAKStbRhcWT5rKQe"></script>
     <!--	Local scripts-->
     <script src="script.js"></script>
-    <!--    Tracking-->
+    <!-- Tracking-->
     <script type="text/javascript">
       (function () {
         var hstc = document.createElement("script");
@@ -65,17 +65,17 @@
     >
   </head>
   <body>
-    <!--    Navigation Bar-->
+    <!-- Navigation Bar-->
     <div w3-include-html="includes/navbar.html"></div>
     <br /><br />
-    <!--    Announcement Header-->
+    <!-- Announcement Header-->
     <div w3-include-html="includes/prop-announcement-header.html"></div>
     <!--	Title-->
     <div class="container mt-3 mb-3">
       <h1>45 Linton Street <span class="badge badge-info">Available</span></h1>
       <!-- <h1>45 Linton Street <span class="badge badge-secondary">Reserved</span></h1> -->
     </div>
-    <!--    Photos-->
+    <!-- Photos-->
     <div class="container px-0 px-md-3">
       <div id="photoCarousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner" id="prop-image">
@@ -205,7 +205,7 @@
         </a>
       </div>
     </div>
-    <!--    Buttons-->
+    <!-- Buttons-->
     <div class="container">
       <div class="row">
         <div class="col-12 col-sm-6 mt-2">
@@ -230,7 +230,7 @@
         </div>
       </div>
     </div>
-    <!--    Info-->
+    <!-- Info-->
     <div class="container mt-3">
       <!-- <h3>45 Linton Street CA1 2LY</h3> -->
       <h5>
@@ -248,46 +248,100 @@
         Rent includes gas, electric, water, broadband & TV licence. Not affected
         by 2005 or 2015 floods.
       </p>
-      <ul class="list-group">
-        <li class="list-group-item">
-          <i class="fas fa-check"></i>&nbsp; 3 double rooms
-        </li>
-        <li class="list-group-item">
-          <i class="fas fa-check"></i>&nbsp; Large living room with Smart TV and
-          licence
-        </li>
-        <li class="list-group-item">
-          <i class="fas fa-check"></i>&nbsp; Dining area
-        </li>
-        <li class="list-group-item">
-          <i class="fas fa-check"></i>&nbsp; Upstairs bathroom with corner bath
-          and shower
-        </li>
-        <li class="list-group-item">
-          <i class="fas fa-check"></i>&nbsp; Fitted kitchen with gas cooker
-        </li>
-        <li class="list-group-item">
-          <i class="fas fa-check"></i>&nbsp; Washer/dryer
-        </li>
-        <li class="list-group-item">
-          <i class="fas fa-check"></i>&nbsp; Fridge freezer
-        </li>
-        <li class="list-group-item">
-          <i class="fas fa-check"></i>&nbsp; Microwave, kettle, toaster & iron
-        </li>
-        <li class="list-group-item">
-          <i class="fas fa-check"></i>&nbsp; Outdoor yard
-        </li>
-        <li class="list-group-item">
-          <i class="fas fa-check"></i>&nbsp; Free on street parking
-        </li>
-        <li class="list-group-item">
-          <i class="fas fa-check"></i>&nbsp; 4 minutes walking distance to
-          Fusehill Street Campus, supermarkets, bars, restaurants & takeaways
-        </li>
-      </ul>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-6 py-2">
+            <ul class="list-group">
+              <li class="list-group-item">
+                <i class="fas fa-check"></i>&nbsp; 3 double rooms
+              </li>
+              <li class="list-group-item">
+                <i class="fas fa-check"></i>&nbsp; Large living room with Smart
+                TV and licence
+              </li>
+              <li class="list-group-item">
+                <i class="fas fa-check"></i>&nbsp; Dining area
+              </li>
+              <li class="list-group-item">
+                <i class="fas fa-check"></i>&nbsp; Upstairs bathroom with corner
+                bath and shower
+              </li>
+              <li class="list-group-item">
+                <i class="fas fa-check"></i>&nbsp; Fitted kitchen with gas
+                cooker
+              </li>
+              <li class="list-group-item">
+                <i class="fas fa-check"></i>&nbsp; Washer/dryer
+              </li>
+              <li class="list-group-item">
+                <i class="fas fa-check"></i>&nbsp; Fridge freezer
+              </li>
+              <li class="list-group-item">
+                <i class="fas fa-check"></i>&nbsp; Microwave, kettle, toaster &
+                iron
+              </li>
+              <li class="list-group-item">
+                <i class="fas fa-check"></i>&nbsp; Outdoor yard
+              </li>
+              <li class="list-group-item">
+                <i class="fas fa-check"></i>&nbsp; Free on street parking
+              </li>
+              <li class="list-group-item">
+                <i class="fas fa-check"></i>&nbsp; 4 minutes walking distance to
+                Fusehill Street Campus, supermarkets, bars, restaurants &
+                takeaways
+              </li>
+            </ul>
+          </div>
+          <!--Google maps element -->
+          <div class="col-12 col-lg-6 py-2">
+            <div
+              id="map"
+              style="min-height: 400px; width: 100%; height: 100%"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <!-- Google Maps scripting -->
+      <script>
+        ((g) => {
+          var h,
+            a,
+            k,
+            p = "The Google Maps JavaScript API",
+            c = "google",
+            l = "importLibrary",
+            q = "__ib__",
+            m = document,
+            b = window;
+          b = b[c] || (b[c] = {});
+          var d = b.maps || (b.maps = {}),
+            r = new Set(),
+            e = new URLSearchParams(),
+            u = () =>
+              h ||
+              (h = new Promise(async (f, n) => {
+                await (a = m.createElement("script"));
+                e.set("libraries", [...r] + "");
+                for (k in g)
+                  e.set(
+                    k.replace(/[A-Z]/g, (t) => "_" + t[0].toLowerCase()),
+                    g[k]
+                  );
+                e.set("callback", c + ".maps." + q);
+                a.src = `https://maps.${c}apis.com/maps/api/js?` + e;
+                d[q] = f;
+                a.onerror = () => (h = n(Error(p + " could not load.")));
+                a.nonce = m.querySelector("script[nonce]")?.nonce || "";
+                m.head.append(a);
+              }));
+          d[l]
+            ? console.warn(p + " only loads once. Ignoring:", g)
+            : (d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)));
+        })({ key: "AIzaSyAZxhQYFDMvh96WOI3zOjSc21Ll5FxTkiQ", v: "weekly" });
+      </script>
     </div>
-    <!--    Video Modal-->
+    <!-- Video Modal-->
     <div
       class="modal fade"
       id="video-modal"
@@ -328,7 +382,7 @@
         </div>
       </div>
     </div>
-    <!--    Viewing Modal-->
+    <!-- Viewing Modal-->
     <div
       class="modal fade"
       id="viewing-modal"
@@ -453,7 +507,7 @@
         </div>
       </div>
     </div>
-    <!--    Footer Links-->
+    <!-- Footer Links-->
     <hr class="mb-1" />
     <div class="container mb-2">
       <div class="row">
@@ -514,11 +568,11 @@
         $frame.attr("src", videoSource);
       }
     </script>
-    <!--    HTML include-->
+    <!-- HTML include-->
     <script>
       includeHTML();
     </script>
-    <!--    reCAPTCHA script-->
+    <!-- reCAPTCHA script-->
     <script>
       grecaptcha.ready(function () {
         grecaptcha
@@ -531,7 +585,29 @@
           });
       });
     </script>
-    <!--    jQuery, Popper, Bootstrap, includeHTML-->
+    <!-- Google Maps scripting -->
+    <script>
+      async function initMap(location) {
+        let position = { lat: 54.8887599, lng: -2.9217116 };
+        const { Map } = await google.maps.importLibrary("maps");
+        const { AdvancedMarkerElement } = await google.maps.importLibrary(
+          "marker"
+        );
+        map = new Map(document.getElementById("map"), {
+          zoom: 13,
+          center: position,
+          mapId: "MAP_ID",
+        });
+        const marker = new AdvancedMarkerElement({
+          map: map,
+          position: position,
+          title: "Uluru",
+        });
+      }
+
+      initMap();
+    </script>
+    <!-- jQuery, Popper, Bootstrap, includeHTML-->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

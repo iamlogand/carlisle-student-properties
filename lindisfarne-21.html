@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!--    Title, icon, meta-->
+    <!-- Title, icon, meta-->
     <title>Student Accommodation in Carlisle - 21 Lindisfarne Street</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <meta charset="utf-8" />
@@ -17,7 +17,7 @@
       name="keywords"
       content="carlisle, student, properties, accommodation, houses"
     />
-    <!--    Styles-->
+    <!-- Styles-->
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="bootstrap-4.6.0/dist/css/bootstrap.min.css" />
     <!--	Tick characters-->
@@ -38,11 +38,11 @@
       gtag("js", new Date());
       gtag("config", "UA-192896830-1");
     </script>
-    <!--    Google reCAPTCHA-->
+    <!-- Google reCAPTCHA-->
     <script src="https://www.google.com/recaptcha/api.js?render=6LfV6pIdAAAAAK8-djX_oOXhzAKStbRhcWT5rKQe"></script>
     <!--	Local scripts-->
     <script src="script.js"></script>
-    <!--    Tracking-->
+    <!-- Tracking-->
     <script type="text/javascript">
       (function () {
         var hstc = document.createElement("script");
@@ -67,10 +67,10 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
   </head>
   <body>
-    <!--    Navigation Bar-->
+    <!-- Navigation Bar-->
     <div w3-include-html="includes/navbar.html"></div>
     <br /><br />
-    <!--    Announcement Header-->
+    <!-- Announcement Header-->
     <div w3-include-html="includes/prop-announcement-header.html"></div>
     <!--	Title-->
     <div class="container mt-3 mb-3">
@@ -188,7 +188,7 @@
         </a>
       </div>
     </div>
-    <!--    Buttons-->
+    <!-- Buttons-->
     <div class="container">
       <div class="row">
         <div class="col-12 col-sm-6 mt-2">
@@ -213,7 +213,7 @@
         </div>
       </div>
     </div>
-    <!--    Info-->
+    <!-- Info-->
     <div class="container mt-3">
       <!-- <h3>21 Lindisfarne Street CA1 2ND</h3> -->
       <h5>
@@ -318,7 +318,7 @@
         })({ key: "AIzaSyAZxhQYFDMvh96WOI3zOjSc21Ll5FxTkiQ", v: "weekly" });
       </script>
     </div>
-    <!--    Video Modal-->
+    <!-- Video Modal-->
     <div
       class="modal fade"
       id="video-modal"
@@ -359,7 +359,7 @@
         </div>
       </div>
     </div>
-    <!--    Viewing Modal-->
+    <!-- Viewing Modal-->
     <div
       class="modal fade"
       id="viewing-modal"
@@ -484,7 +484,7 @@
         </div>
       </div>
     </div>
-    <!--    Footer Links-->
+    <!-- Footer Links-->
     <hr class="mb-1" />
     <div class="container mb-2">
       <div class="row">
@@ -549,7 +549,7 @@
     <script>
       includeHTML();
     </script>
-    <!--    reCAPTCHA script-->
+    <!-- reCAPTCHA script-->
     <script>
       grecaptcha.ready(function () {
         grecaptcha
@@ -563,9 +563,10 @@
           });
       });
     </script>
+    <!-- Google Maps scripting -->
     <script>
       async function initMap(location) {
-        let position = { lat: 54.887, lng: -2.92 };
+        let position = { lat: 54.8871195, lng: -2.922844 };
         const { Map } = await google.maps.importLibrary("maps");
         const { AdvancedMarkerElement } = await google.maps.importLibrary(
           "marker"
@@ -573,7 +574,7 @@
         map = new Map(document.getElementById("map"), {
           zoom: 13,
           center: position,
-          mapId: "DEMO_MAP_ID",
+          mapId: "MAP_ID",
         });
         const marker = new AdvancedMarkerElement({
           map: map,
@@ -584,7 +585,7 @@
 
       initMap();
     </script>
-    <!--    jQuery first, then Popper.js, then Bootstrap JS-->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS-->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
