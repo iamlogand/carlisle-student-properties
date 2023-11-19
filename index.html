@@ -1,329 +1,551 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<!--    Title, icon, meta-->
-    <title>Student Accommodation in Carlisle - Houses & Rooms Available for Rent</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <meta name="description" content="High quality fully-furnished student accommodation now available for rent in Carlisle, ideally situated near the University of Cumbria Fusehill Street Campus.">
-	<meta name="keywords" content="carlisle, student, properties, accommodation, houses"/>
-<!--    Styles-->
-    <link rel="stylesheet" href="styles.css"/>
-    <link rel="stylesheet" href="bootstrap-4.6.0/dist/css/bootstrap.min.css"/>
-<!--	Tick characters-->
-    <script src="https://kit.fontawesome.com/b895e44baa.js" crossorigin="anonymous"></script>
-<!--	Google Analytics-->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-192896830-1"></script>
-	<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-192896830-1'); </script>
-<!--    Google reCAPTCHA-->
-    <script src='https://www.google.com/recaptcha/api.js?render=6LfV6pIdAAAAAK8-djX_oOXhzAKStbRhcWT5rKQe'></script>
-<!--	Local scripts-->
-	<script src="script.js"></script>
-<!--    Tracking-->
-    <script type="text/javascript">(function(){var hstc=document.createElement('script'); hstc.src='https://log.hitsteps.net/track.php?code=f1a5bb9d02c0ffc6dd3f005f351540d3';hstc.async=true;var htssc = document.getElementsByTagName('script')[0];htssc.parentNode.insertBefore(hstc, htssc);})();
-    </script><noscript><a href="http://www.hitsteps.com/"><img src="//log.hitsteps.net/track.php?mode=img&amp;code=f1a5bb9d02c0ffc6dd3f005f351540d3" alt="visitor activity tracker" width="1" height="1" />blog tracking</a></noscript>
-</head>
-<body>
-<!--    Navigation Bar-->
-    <div w3-include-html="includes/navbar.html"></div>
-	<br><br>
-<!--    Viewing Request Form Completion Feedback-->
-    <div class="container" id="form-feedback">
-        <div class="row mb-3">
-            <div class="col-12 col-sm-1"></div>
-            <div class="col-12 col-sm-10 text-center">
-                <div class="alert alert-success mt-4 mb-0" role="alert">
-                    <h4 class="alert-heading">Request received - thank you!</h4>
-                    <p>Thanks for submitting a viewing request. Jane will contact you soon to arrange a viewing for you.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-<!--    Announcement Header-->
-    <div class="jumbotron mt-0 mb-0 py-4">
-        <div class="container" id="announcement">
-            <h1 class="display-4">Viewings now available for September 2024</h1>
-            <p class="lead">Quality student houses available to rent in the Carlisle Fusehill campus area.</p>
-            <ul class="list-group list-group-horizontal-md">
-                <li class="list-group-item py-1 px-3">
-                    <a class="nav-link active" href="tel:07780602288">Call/Text 07780602288</a>
-                </li>
-                <li class="list-group-item py-1 px-3">
-                    <a class="nav-link" href="mailto:carlislestudentproperties@aol.co.uk">carlislestudentproperties&#8203;@aol.co.uk</a>
-                </li>   
-            </ul>
-        </div>
-    </div>
-<!--    Property Cards-->
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-sm-3"></div>
-            <div class="col-12 col-sm-6 text-center">
-                <button type="button" class="btn btn-primary btn-block mt-4" data-toggle="modal" data-target="#viewing-modal">
-                    Arrange Viewing
-                </button>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-6 col-lg-4">
-                <div class="card mt-4">
-                    <a class="btn p-0 text-left" role="button" href="lindisfarne-21.html">
-                        <img src="images/lindisfarne-21/lindisfarne-21-01.jpg" class="card-img-top prop-primary-image">
-                        <div class="card-img-overlay">
-                            <h5><span class="badge badge-light">3 Bedroom House</span></h5>
-                        </div>
-                        <div class="card-body lightbgcolour">
-                            <h5 class="card-title">21 Lindisfarne Street <span class="badge badge-info">Available</span></h5>
-                            <!-- <h5 class="card-title">21 Lindisfarne Street <span class="badge badge-secondary">Reserved</span></h5> -->
-
-                            <h6 class="card-subtitle mb-2 text-muted">CA1 2ND</h6>
-
-                            <p class="card-text">3 Rooms Available from £98/week including all bills</p>
-                            <!-- <p class="card-text">3 Bedroom House</p> -->
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-                <div class="card mt-4">
-                    <a class="btn p-0 text-left" role="button" href="alexander-50.html">
-                        <img src="images/alexander-50/alexander-50-01.jpg" class="card-img-top prop-primary-image">
-                        <div class="card-img-overlay">
-                            <h5><span class="badge badge-light">3 Bedroom House</span></h5>
-                        </div>
-                        <div class="card-body lightbgcolour">
-                            <h5 class="card-title">50 Alexander Street <span class="badge badge-info">Available</span></h5>
-                            <!-- <h5 class="card-title">50 Alexander Street <span class="badge badge-secondary">Reserved</span></h5> -->
-
-                            <h6 class="card-subtitle mb-2 text-muted">CA1 2LH</h6>
-
-                            <p class="card-text">3 Rooms Available from £100/week including all bills</p>
-                            <!-- <p class="card-text">3 Bedroom House</p> -->
-                        </div>
-                    </a>
-                </div>
-            </div>
-			<div class="col-sm-6 col-lg-4">
-                <div class="card mt-4">
-                    <a class="btn p-0 text-left" role="button" href="sybil-20.html">
-                        <img src="images/sybil-20/sybil-20-01.jpg" class="card-img-top prop-primary-image">
-                        <div class="card-img-overlay">
-                            <h5><span class="badge badge-light">3 Bedroom House</span></h5>
-                        </div>
-                        <div class="card-body lightbgcolour">
-                            <h5 class="card-title">20 Sybil Street <span class="badge badge-info">Available</span></h5>
-                            <!-- <h5 class="card-title">20 Sybil Street <span class="badge badge-secondary">Reserved</span></h5> -->
-
-                            <h6 class="card-subtitle mb-2 text-muted">CA1 SDS</h6>
-
-                            <p class="card-text">3 Rooms Available from £100/week including all bills</p>
-                            <!-- <p class="card-text">3 Bedroom House</p> -->
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-                <div class="card mt-4">
-                    <a class="btn p-0 text-left" role="button" href="linton-45.html">
-                        <img src="images/linton-45/linton-45-01.jpg" class="card-img-top prop-primary-image">
-                        <div class="card-img-overlay">
-                            <h5><span class="badge badge-light">3 Bedroom House</span></h5>
-                        </div>
-                        <div class="card-body lightbgcolour">
-                            <h5 class="card-title">45 Linton Street <span class="badge badge-info">Available</span></h5>
-                            <!-- <h5 class="card-title">45 Linton Street <span class="badge badge-secondary">Reserved</span></h5> -->
-
-                            <h6 class="card-subtitle mb-2 text-muted">CA1 2LY</h6>
-
-                            <p class="card-text">3 Rooms Available from £100/week including all bills</p>
-                            <!-- <p class="card-text">3 Bedroom House</p> -->
-                        </div>
-                    </a>
-                </div>
-            </div>
-			<div class="col-sm-6 col-lg-4">
-                <div class="card mt-4">
-                    <a class="btn p-0 text-left" role="button" href="alexander-42.html">
-                        <img src="images/alexander-42/alexander-42-01.jpg" class="card-img-top prop-primary-image">
-                        <div class="card-img-overlay">
-                            <h5><span class="badge badge-light">2 Bedroom House</span></h5>
-                        </div>
-                        <div class="card-body lightbgcolour">
-                            <h5 class="card-title">42 Alexander Street <span class="badge badge-info">Available</span></h5>
-                            <!-- <h5 class="card-title">42 Alexander Street <span class="badge badge-secondary">Reserved</span></h5> -->
-
-                            <h6 class="card-subtitle mb-2 text-muted">CA1 2LH</h6>
-
-                            <p class="card-text">2 Rooms Available at £120/week each including all bills</p>
-                            <!-- <p class="card-text">2 Bedroom House</p> -->
-                        </div>
-                    </a>
-                </div>
-            </div>
-			<div class="col-sm-6 col-lg-4">
-                <div class="card mt-4">
-                    <a class="btn p-0 text-left" role="button" href="bowman-42.html">
-                        <img src="images/bowman-42/bowman-42-01.jpg" class="card-img-top prop-primary-image">
-                        <div class="card-img-overlay">
-                            <h5><span class="badge badge-light">3 Bedroom House</span></h5>
-                        </div>
-                        <div class="card-body lightbgcolour">
-                            <!-- <h5 class="card-title">42 Bowman Street <span class="badge badge-info">Available</span></h5> -->
-                            <h5 class="card-title">42 Bowman Street <span class="badge badge-secondary">Reserved</span></h5>
-
-                            <h6 class="card-subtitle mb-2 text-muted">CA1 2HR</h6>
-
-                            <!-- <p class="card-text">3 Rooms Available from £95/week including all bills</p> -->
-                            <p class="card-text">3 Bedroom House</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-                <div class="card mt-4">
-                    <a class="btn p-0 text-left" role="button" href="oswald-106.html">
-                        <img src="images/oswald-106/oswald-106-01.jpg" class="card-img-top prop-primary-image">
-                        <div class="card-img-overlay">
-                            <h5><span class="badge badge-light">3 Bedroom House</span></h5>
-                        </div>
-                        <div class="card-body lightbgcolour">
-                            <!-- <h5 class="card-title">106 Oswald Street <span class="badge badge-info">Available</span></h5> -->
-                            <h5 class="card-title">106 Oswald Street <span class="badge badge-secondary">Reserved</span></h5>
-
-                            <h6 class="card-subtitle mb-2 text-muted">CA1 2LU</h6>
-
-                            <!-- <p class="card-text">2 Rooms Available at £95/week including all bills</p> -->
-                            <p class="card-text">3 Bedroom House</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-sm-3"></div>
-                <div class="col-12 col-sm-6 text-center">
-                <button type="button" class="btn btn-primary btn-block mt-4" data-toggle="modal" data-target="#viewing-modal">
-                    Arrange Viewing
-                </button>
-            </div>
-        </div>
-    </div>
-<!--    Viewing Modal-->
-	<div class="modal fade" id="viewing-modal" tabindex="-1" role="dialog" aria-labelledby="viewing-modalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Arrange Viewing</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <form method="post" action="form-processor.php" autocomplete="on" id="demo-form">
-                    <div class="modal-body">
-                        <div class="form-group row">
-                            <label for="inputName" class="col-sm-4 col-form-label">
-                                Name <span style="color: red">*</span>
-                            </label>
-                            <div class="col-sm-8">
-                                <input type="text" class="form-control" id="inputName" name="name" required>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="inputEmail" class="col-sm-4 col-form-label">
-                                Email address <span style="color: red">*</span>
-                            </label>
-                            <div class="col-sm-8">
-                                <input type="email" class="form-control" id="inputEmail" name="email" placeholder="name@example.com" required>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="inputPhoneNumber" class="col-sm-4 col-form-label">Phone number</label>
-                            <div class="col-sm-8">
-                                <input type="tel" class="form-control" id="inputPhoneNumber" name="phone">
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="form-group">
-                            <label for="inputProperties">Properties to view</label>
-                                <input type="text" class="form-control" id="inputProperties" name="properties" placeholder="">
-                        </div>
-                        <div class="form-group">
-                            <label for="inputGroupSize">Group size</label>
-                                <select class="form-control" id="inputGroupSize" name="group">
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                </select>
-                        </div>
-                        <div>
-                            <label for="inputMessage">
-                                Message <span style="color: red">*</span>
-                            </label>
-                            <textarea class="form-control" id="inputMessage" name="message" rows="3" required></textarea>
-                        </div>
-                        <div>
-                            <p class="mt-2 mb-0" style="color: red"><small>* required fields</small></p>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response" />
-                        <input type="hidden" id="request-page" name="request-page" />
-                        <input type="submit" class="btn btn-primary" value="Submit" />
-                    </div>
-                </form>
-			</div>
-		</div>
-	</div>
-<!--    Footer Links-->
-    <hr class="mb-1">
-    <div class="container mb-2">
-        <div class="row">
-            <div class="col-12 text-center col-lg-2 text-lg-left my-lg-2">
-                <a class="nav-link active" href="tel:07780602288">07780602288</a>
-            </div>
-            <div class="col-12 text-center col-lg-4 text-lg-center my-lg-2">
-                <a class="nav-link" href="mailto:carlislestudentproperties@aol.co.uk">carlislestudentproperties&#8203;@aol.co.uk</a>
-            </div>
-            <div class="col-12 text-center col-lg-4 text-lg-center my-lg-2">
-                <a class="nav-link" href="https://www.facebook.com/Carlislestudentproperties">
-                <img src="https://facebookbrand.com/wp-content/uploads/2019/04/f_logo_RGB-Hex-Blue_512.png?w=512&h=512" alt="Find us on Facebook" width="30"/> Find us on Facebook </a>
-            </div>
-            <div class="col-12 text-center col-lg-2 text-lg-right">
-                <a class="nav-link" href="https://sturents.com/student-accommodation/from-landlord/carlisle-student-properties/3586">
-                <img src="https://sturents.com/images/live/logo.svg?ref=3586&version=real" alt="Find us on StuRents" width="120"/></a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 text-center">
-                <a class="nav-link" href="https://www.nrla.org.uk/">
-                <img src="images/NRLA-accreditation-logo.png" alt="NRLA Accreditation" width="120"/></a>
-            </div>
-        </div>
-    </div>
-<!--    HTML include-->
-	<script>includeHTML();</script>
-<!--    reCAPTCHA script-->
-	<script>
-        grecaptcha.ready(function() {
-            grecaptcha.execute('6LfV6pIdAAAAAK8-djX_oOXhzAKStbRhcWT5rKQe', {action: 'homepage'})
-            .then(function(token) {
-                document.getElementById('g-recaptcha-response').value=token;
-                document.getElementById('request-page').value='home page';
-            });
-        });
-    </script>
-<!--    Viewing request form completion feedback visibility control--->
+  <head>
+    <!--    Title, icon, meta-->
+    <title>
+      Student Accommodation in Carlisle - Houses & Rooms Available for Rent
+    </title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="High quality fully-furnished student accommodation now available for rent in Carlisle, ideally situated near the University of Cumbria Fusehill Street Campus."
+    />
+    <meta
+      name="keywords"
+      content="carlisle, student, properties, accommodation, houses"
+    />
+    <!--    Styles-->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="bootstrap-4.6.0/dist/css/bootstrap.min.css" />
+    <!--	Tick characters-->
+    <script
+      src="https://kit.fontawesome.com/b895e44baa.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--	Google Analytics-->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-192896830-1"
+    ></script>
     <script>
-        var feedbackElem = document.getElementById('form-feedback');
-        if (window.location.search.substr(1) !== 'vr=1') {
-            feedbackElem.style.display = 'none';
-        }
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-192896830-1");
     </script>
-<!--    jQuery, Popper, Bootstrap, includeHTML-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</body>
+    <!--    Google reCAPTCHA-->
+    <script src="https://www.google.com/recaptcha/api.js?render=6LfV6pIdAAAAAK8-djX_oOXhzAKStbRhcWT5rKQe"></script>
+    <!--	Local scripts-->
+    <script src="script.js"></script>
+    <!--    Tracking-->
+    <script type="text/javascript">
+      (function () {
+        var hstc = document.createElement("script");
+        hstc.src =
+          "https://log.hitsteps.net/track.php?code=f1a5bb9d02c0ffc6dd3f005f351540d3";
+        hstc.async = true;
+        var htssc = document.getElementsByTagName("script")[0];
+        htssc.parentNode.insertBefore(hstc, htssc);
+      })();
+    </script>
+    <noscript
+      ><a href="http://www.hitsteps.com/"
+        ><img
+          src="//log.hitsteps.net/track.php?mode=img&amp;code=f1a5bb9d02c0ffc6dd3f005f351540d3"
+          alt="visitor activity tracker"
+          width="1"
+          height="1"
+        />blog tracking</a
+      ></noscript
+    >
+  </head>
+  <body>
+    <!--    Navigation Bar-->
+    <div w3-include-html="includes/navbar.html"></div>
+    <br /><br />
+    <!--    Viewing Request Form Completion Feedback-->
+    <div class="container" id="form-feedback">
+      <div class="row mb-3">
+        <div class="col-12 col-sm-1"></div>
+        <div class="col-12 col-sm-10 text-center">
+          <div class="alert alert-success mt-4 mb-0" role="alert">
+            <h4 class="alert-heading">Request received - thank you!</h4>
+            <p>
+              Thanks for submitting a viewing request. Jane will contact you
+              soon to arrange a viewing for you.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--    Announcement Header-->
+    <div class="jumbotron mt-0 mb-0 py-4">
+      <div class="container" id="announcement">
+        <h1 class="display-4">Viewings now available for September 2024</h1>
+        <p class="lead">
+          Quality student houses available to rent in the Carlisle Fusehill
+          campus area.
+        </p>
+        <ul class="list-group list-group-horizontal-md">
+          <li class="list-group-item py-1 px-3">
+            <a class="nav-link active" href="tel:07780602288"
+              >Call/Text 07780602288</a
+            >
+          </li>
+          <li class="list-group-item py-1 px-3">
+            <a
+              class="nav-link"
+              href="mailto:carlislestudentproperties@aol.co.uk"
+              >carlislestudentproperties&#8203;@aol.co.uk</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--    Property Cards-->
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-3"></div>
+        <div class="col-12 col-sm-6 text-center">
+          <button
+            type="button"
+            class="btn btn-primary btn-block mt-4"
+            data-toggle="modal"
+            data-target="#viewing-modal"
+          >
+            Arrange Viewing
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 col-lg-4">
+          <div class="card mt-4">
+            <a
+              class="btn p-0 text-left"
+              role="button"
+              href="lindisfarne-21.html"
+            >
+              <img
+                src="images/lindisfarne-21/lindisfarne-21-01.jpg"
+                class="card-img-top prop-primary-image"
+              />
+              <div class="card-img-overlay">
+                <h5><span class="badge badge-light">3 Bedroom House</span></h5>
+              </div>
+              <div class="card-body lightbgcolour">
+                <h5 class="card-title">
+                  21 Lindisfarne Street
+                  <span class="badge badge-info">Available</span>
+                </h5>
+                <!-- <h5 class="card-title">21 Lindisfarne Street <span class="badge badge-secondary">Reserved</span></h5> -->
+
+                <h6 class="card-subtitle mb-2 text-muted">CA1 2ND</h6>
+
+                <p class="card-text">
+                  3 Rooms Available from £98/week including all bills
+                </p>
+                <!-- <p class="card-text">3 Bedroom House</p> -->
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="card mt-4">
+            <a class="btn p-0 text-left" role="button" href="alexander-50.html">
+              <img
+                src="images/alexander-50/alexander-50-01.jpg"
+                class="card-img-top prop-primary-image"
+              />
+              <div class="card-img-overlay">
+                <h5><span class="badge badge-light">3 Bedroom House</span></h5>
+              </div>
+              <div class="card-body lightbgcolour">
+                <h5 class="card-title">
+                  50 Alexander Street
+                  <span class="badge badge-info">Available</span>
+                </h5>
+                <!-- <h5 class="card-title">50 Alexander Street <span class="badge badge-secondary">Reserved</span></h5> -->
+
+                <h6 class="card-subtitle mb-2 text-muted">CA1 2LH</h6>
+
+                <p class="card-text">
+                  3 Rooms Available from £100/week including all bills
+                </p>
+                <!-- <p class="card-text">3 Bedroom House</p> -->
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="card mt-4">
+            <a class="btn p-0 text-left" role="button" href="sybil-20.html">
+              <img
+                src="images/sybil-20/sybil-20-01.jpg"
+                class="card-img-top prop-primary-image"
+              />
+              <div class="card-img-overlay">
+                <h5><span class="badge badge-light">3 Bedroom House</span></h5>
+              </div>
+              <div class="card-body lightbgcolour">
+                <h5 class="card-title">
+                  20 Sybil Street
+                  <span class="badge badge-info">Available</span>
+                </h5>
+                <!-- <h5 class="card-title">20 Sybil Street <span class="badge badge-secondary">Reserved</span></h5> -->
+
+                <h6 class="card-subtitle mb-2 text-muted">CA1 SDS</h6>
+
+                <p class="card-text">
+                  3 Rooms Available from £100/week including all bills
+                </p>
+                <!-- <p class="card-text">3 Bedroom House</p> -->
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="card mt-4">
+            <a class="btn p-0 text-left" role="button" href="linton-45.html">
+              <img
+                src="images/linton-45/linton-45-01.jpg"
+                class="card-img-top prop-primary-image"
+              />
+              <div class="card-img-overlay">
+                <h5><span class="badge badge-light">3 Bedroom House</span></h5>
+              </div>
+              <div class="card-body lightbgcolour">
+                <h5 class="card-title">
+                  45 Linton Street
+                  <span class="badge badge-info">Available</span>
+                </h5>
+                <!-- <h5 class="card-title">45 Linton Street <span class="badge badge-secondary">Reserved</span></h5> -->
+
+                <h6 class="card-subtitle mb-2 text-muted">CA1 2LY</h6>
+
+                <p class="card-text">
+                  3 Rooms Available from £100/week including all bills
+                </p>
+                <!-- <p class="card-text">3 Bedroom House</p> -->
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="card mt-4">
+            <a class="btn p-0 text-left" role="button" href="alexander-42.html">
+              <img
+                src="images/alexander-42/alexander-42-01.jpg"
+                class="card-img-top prop-primary-image"
+              />
+              <div class="card-img-overlay">
+                <h5><span class="badge badge-light">2 Bedroom House</span></h5>
+              </div>
+              <div class="card-body lightbgcolour">
+                <h5 class="card-title">
+                  42 Alexander Street
+                  <span class="badge badge-info">Available</span>
+                </h5>
+                <!-- <h5 class="card-title">42 Alexander Street <span class="badge badge-secondary">Reserved</span></h5> -->
+
+                <h6 class="card-subtitle mb-2 text-muted">CA1 2LH</h6>
+
+                <p class="card-text">
+                  2 Rooms Available at £120/week each including all bills
+                </p>
+                <!-- <p class="card-text">2 Bedroom House</p> -->
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="card mt-4">
+            <a class="btn p-0 text-left" role="button" href="bowman-42.html">
+              <img
+                src="images/bowman-42/bowman-42-01.jpg"
+                class="card-img-top prop-primary-image"
+              />
+              <div class="card-img-overlay">
+                <h5><span class="badge badge-light">3 Bedroom House</span></h5>
+              </div>
+              <div class="card-body lightbgcolour">
+                <!-- <h5 class="card-title">42 Bowman Street <span class="badge badge-info">Available</span></h5> -->
+                <h5 class="card-title">
+                  42 Bowman Street
+                  <span class="badge badge-secondary">Reserved</span>
+                </h5>
+
+                <h6 class="card-subtitle mb-2 text-muted">CA1 2HR</h6>
+
+                <!-- <p class="card-text">3 Rooms Available from £95/week including all bills</p> -->
+                <p class="card-text">3 Bedroom House</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="card mt-4">
+            <a class="btn p-0 text-left" role="button" href="oswald-106.html">
+              <img
+                src="images/oswald-106/oswald-106-01.jpg"
+                class="card-img-top prop-primary-image"
+              />
+              <div class="card-img-overlay">
+                <h5><span class="badge badge-light">3 Bedroom House</span></h5>
+              </div>
+              <div class="card-body lightbgcolour">
+                <!-- <h5 class="card-title">106 Oswald Street <span class="badge badge-info">Available</span></h5> -->
+                <h5 class="card-title">
+                  106 Oswald Street
+                  <span class="badge badge-secondary">Reserved</span>
+                </h5>
+
+                <h6 class="card-subtitle mb-2 text-muted">CA1 2LU</h6>
+
+                <!-- <p class="card-text">2 Rooms Available at £95/week including all bills</p> -->
+                <p class="card-text">3 Bedroom House</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-sm-3"></div>
+        <div class="col-12 col-sm-6 text-center">
+          <button
+            type="button"
+            class="btn btn-primary btn-block mt-4"
+            data-toggle="modal"
+            data-target="#viewing-modal"
+          >
+            Arrange Viewing
+          </button>
+        </div>
+      </div>
+    </div>
+    <!--    Viewing Modal-->
+    <div
+      class="modal fade"
+      id="viewing-modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="viewing-modalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">
+              Arrange Viewing
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <form
+            method="post"
+            action="form-processor.php"
+            autocomplete="on"
+            id="demo-form"
+          >
+            <div class="modal-body">
+              <div class="form-group row">
+                <label for="inputName" class="col-sm-4 col-form-label">
+                  Name <span style="color: red">*</span>
+                </label>
+                <div class="col-sm-8">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputName"
+                    name="name"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="inputEmail" class="col-sm-4 col-form-label">
+                  Email address <span style="color: red">*</span>
+                </label>
+                <div class="col-sm-8">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="inputEmail"
+                    name="email"
+                    placeholder="name@example.com"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="inputPhoneNumber" class="col-sm-4 col-form-label"
+                  >Phone number</label
+                >
+                <div class="col-sm-8">
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="inputPhoneNumber"
+                    name="phone"
+                  />
+                </div>
+              </div>
+              <hr />
+              <div class="form-group">
+                <label for="inputProperties">Properties to view</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputProperties"
+                  name="properties"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-group">
+                <label for="inputGroupSize">Group size</label>
+                <select class="form-control" id="inputGroupSize" name="group">
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+              <div>
+                <label for="inputMessage">
+                  Message <span style="color: red">*</span>
+                </label>
+                <textarea
+                  class="form-control"
+                  id="inputMessage"
+                  name="message"
+                  rows="3"
+                  required
+                ></textarea>
+              </div>
+              <div>
+                <p class="mt-2 mb-0" style="color: red">
+                  <small>* required fields</small>
+                </p>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <input
+                type="hidden"
+                id="g-recaptcha-response"
+                name="g-recaptcha-response"
+              />
+              <input type="hidden" id="request-page" name="request-page" />
+              <input type="submit" class="btn btn-primary" value="Submit" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--    Footer Links-->
+    <hr class="mb-1" />
+    <div class="container mb-2">
+      <div class="row">
+        <div class="col-12 text-center col-lg-2 text-lg-left my-lg-2">
+          <a class="nav-link active" href="tel:07780602288">07780602288</a>
+        </div>
+        <div class="col-12 text-center col-lg-4 text-lg-center my-lg-2">
+          <a class="nav-link" href="mailto:carlislestudentproperties@aol.co.uk"
+            >carlislestudentproperties&#8203;@aol.co.uk</a
+          >
+        </div>
+        <div class="col-12 text-center col-lg-4 text-lg-center my-lg-2">
+          <a
+            class="nav-link"
+            href="https://www.facebook.com/Carlislestudentproperties"
+          >
+            <img
+              src="https://facebookbrand.com/wp-content/uploads/2019/04/f_logo_RGB-Hex-Blue_512.png?w=512&h=512"
+              alt="Find us on Facebook"
+              width="30"
+            />
+            Find us on Facebook
+          </a>
+        </div>
+        <div class="col-12 text-center col-lg-2 text-lg-right">
+          <a
+            class="nav-link"
+            href="https://sturents.com/student-accommodation/from-landlord/carlisle-student-properties/3586"
+          >
+            <img
+              src="https://sturents.com/images/live/logo.svg?ref=3586&version=real"
+              alt="Find us on StuRents"
+              width="120"
+          /></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 text-center">
+          <a class="nav-link" href="https://www.nrla.org.uk/">
+            <img
+              src="images/NRLA-accreditation-logo.png"
+              alt="NRLA Accreditation"
+              width="120"
+          /></a>
+        </div>
+      </div>
+    </div>
+    <!--    HTML include-->
+    <script>
+      includeHTML();
+    </script>
+    <!--    reCAPTCHA script-->
+    <script>
+      grecaptcha.ready(function () {
+        grecaptcha
+          .execute("6LfV6pIdAAAAAK8-djX_oOXhzAKStbRhcWT5rKQe", {
+            action: "homepage",
+          })
+          .then(function (token) {
+            document.getElementById("g-recaptcha-response").value = token;
+            document.getElementById("request-page").value = "home page";
+          });
+      });
+    </script>
+    <!--    Viewing request form completion feedback visibility control--->
+    <script>
+      var feedbackElem = document.getElementById("form-feedback");
+      if (window.location.search.substr(1) !== "vr=1") {
+        feedbackElem.style.display = "none";
+      }
+    </script>
+    <!--    jQuery, Popper, Bootstrap, includeHTML-->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
