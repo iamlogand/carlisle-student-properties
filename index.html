@@ -171,7 +171,10 @@
                   42 Alexander Street
                   <span class="badge badge-info">Available</span>
                 </h5> -->
-                <h5 class="card-title">42 Alexander Street <span class="badge badge-secondary">Reserved</span></h5>
+                <h5 class="card-title">
+                  42 Alexander Street
+                  <span class="badge badge-secondary">Reserved</span>
+                </h5>
 
                 <h6 class="card-subtitle mb-2 text-muted">CA1 2LH</h6>
 
@@ -198,7 +201,10 @@
                   50 Alexander Street
                   <span class="badge badge-info">Available</span>
                 </h5> -->
-                <h5 class="card-title">50 Alexander Street <span class="badge badge-secondary">Reserved</span></h5>
+                <h5 class="card-title">
+                  50 Alexander Street
+                  <span class="badge badge-secondary">Reserved</span>
+                </h5>
 
                 <h6 class="card-subtitle mb-2 text-muted">CA1 2LH</h6>
 
@@ -225,9 +231,12 @@
                   20 Sybil Street
                   <span class="badge badge-info">Available</span>
                 </h5> -->
-                <h5 class="card-title">20 Sybil Street <span class="badge badge-secondary">Reserved</span></h5>
+                <h5 class="card-title">
+                  20 Sybil Street
+                  <span class="badge badge-secondary">Reserved</span>
+                </h5>
 
-                <h6 class="card-subtitle mb-2 text-muted">CA1 SDS</h6>
+                <h6 class="card-subtitle mb-2 text-muted">CA1 2DS</h6>
 
                 <!-- <p class="card-text">
                   3 Rooms Available from £100/week including all bills
@@ -252,7 +261,10 @@
                   45 Linton Street
                   <span class="badge badge-info">Available</span>
                 </h5> -->
-                <h5 class="card-title">45 Linton Street <span class="badge badge-secondary">Reserved</span></h5>
+                <h5 class="card-title">
+                  45 Linton Street
+                  <span class="badge badge-secondary">Reserved</span>
+                </h5>
 
                 <h6 class="card-subtitle mb-2 text-muted">CA1 2LY</h6>
 
@@ -373,7 +385,7 @@
         d[l]
           ? console.warn(p + " only loads once. Ignoring:", g)
           : (d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)));
-      })({ key: "AIzaSyAZxhQYFDMvh96WOI3zOjSc21Ll5FxTkiQ", v: "weekly" });
+      })({ key: "AIzaSyDSlpvn8pgYnkO_h-jk-_ZnLmuUPi6RiJM", v: "weekly" });
     </script>
     <!-- Viewing Modal-->
     <div
@@ -590,40 +602,118 @@
           center: position,
           mapId: "MAP_ID",
         });
+        let openInfoWindow;
         const marker1 = new AdvancedMarkerElement({
           map: map,
           position: { lat: 54.8870913026343, lng: -2.9201866246561923 },
           title: "21 Lindisfarne Street",
+        });
+        const infoWindow1 = new google.maps.InfoWindow({
+          content:
+            '<h3>21 Lindisfarne Street</h3><p class="mb-2"><b>3 Bedroom House - CA1 2ND</b></p><p class="my-1"><b><a href="lindisfarne-21.html">More info and photos of this property</a></b></p>',
+        });
+        marker1.addListener("click", () => {
+          if (openInfoWindow) {
+            openInfoWindow.close();
+          }
+          infoWindow1.open(map, marker1);
+          openInfoWindow = infoWindow1;
         });
         const marker2 = new AdvancedMarkerElement({
           map: map,
           position: { lat: 54.88873594612381, lng: -2.919148772524647 },
           title: "45 Linton Street",
         });
+        const infoWindow2 = new google.maps.InfoWindow({
+          content:
+            '<h3>45 Linton Street</h3><p class="mb-2"><b>3 Bedroom House - CA1 2LY</b></p><p class="my-1"><b><a href="linton-45.html">More info and photos of this property</a></b></p>',
+        });
+        marker2.addListener("click", () => {
+          if (openInfoWindow) {
+            openInfoWindow.close();
+          }
+          infoWindow2.open(map, marker2);
+          openInfoWindow = infoWindow2;
+        });
         const marker3 = new AdvancedMarkerElement({
           map: map,
           position: { lat: 54.886758901267825, lng: -2.921368097063682 },
           title: "106 Oswald Street",
+        });
+        const infoWindow3 = new google.maps.InfoWindow({
+          content:
+            '<h3>106 Oswald Street</h3><p class="mb-2"><b>3 Bedroom House - CA1 2LU</b></p><p class="my-1"><b><a href="oswald-106.html">More info and photos of this property</a></b></p>',
+        });
+        marker3.addListener("click", () => {
+          if (openInfoWindow) {
+            openInfoWindow.close();
+          }
+          infoWindow3.open(map, marker3);
+          openInfoWindow = infoWindow2;
         });
         const marker4 = new AdvancedMarkerElement({
           map: map,
           position: { lat: 54.88923988206866, lng: -2.919795987245851 },
           title: "20 Sybil Street",
         });
+        const infoWindow4 = new google.maps.InfoWindow({
+          content:
+            '<h3>20 Sybil Street</h3><p class="mb-2"><b>3 Bedroom House - CA1 2DS</b></p><p class="my-1"><b><a href="sybil-20.html">More info and photos of this property</a></b></p>',
+        });
+        marker4.addListener("click", () => {
+          if (openInfoWindow) {
+            openInfoWindow.close();
+          }
+          infoWindow4.open(map, marker4);
+          openInfoWindow = infoWindow4;
+        });
         const marker5 = new AdvancedMarkerElement({
           map: map,
           position: { lat: 54.887974777704244, lng: -2.921087627753678 },
           title: "50 Alexander Street",
+        });
+        const infoWindow5 = new google.maps.InfoWindow({
+          content:
+            '<h3>50 Alexander Street</h3><p class="mb-2"><b>3 Bedroom House - CA1 2LH</b></p><p class="my-1"><b><a href="alexander-50.html">More info and photos of this property</a></b></p>',
+        });
+        marker5.addListener("click", () => {
+          if (openInfoWindow) {
+            openInfoWindow.close();
+          }
+          infoWindow5.open(map, marker5);
+          openInfoWindow = infoWindow5;
         });
         const marker6 = new AdvancedMarkerElement({
           map: map,
           position: { lat: 54.88950113966089, lng: -2.9215176031977745 },
           title: "42 Bowman Street",
         });
+        const infoWindow6 = new google.maps.InfoWindow({
+          content:
+            '<h3>42 Bowman Street</h3><p class="mb-2"><b>3 Bedroom House - CA1 2HR</b></p><p class="my-1"><b><a href="bowman-42.html">More info and photos of this property</a></b></p>',
+        });
+        marker6.addListener("click", () => {
+          if (openInfoWindow) {
+            openInfoWindow.close();
+          }
+          infoWindow6.open(map, marker6);
+          openInfoWindow = infoWindow6;
+        });
         const marker7 = new AdvancedMarkerElement({
           map: map,
           position: { lat: 54.88785598618028, lng: -2.921253254148914 },
           title: "42 Alexander Street",
+        });
+        const infoWindow7 = new google.maps.InfoWindow({
+          content:
+            '<h3>42 Alexander Street</h3><p class="mb-2"><b>2 Bedroom House - CA1 2LH</b></p><p class="my-1"><b><a href="alexander-42.html">More info and photos of this property</a></b></p>',
+        });
+        marker7.addListener("click", () => {
+          if (openInfoWindow) {
+            openInfoWindow.close();
+          }
+          infoWindow7.open(map, marker7);
+          openInfoWindow = infoWindow7;
         });
       }
 
