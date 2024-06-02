@@ -76,7 +76,7 @@
     // For a test, only send to admin, and label email as a 'TEST'
     // When testing the Viewing Request form, put 'admin' as the name
     if ($name == 'admin') {
-        $to = "carlislestudentproperties@gmail.com";
+        $to = "iamlogandavidson@gmail.com";
         $email_subject = "TEST " . $email_subject;
     }
 
@@ -91,8 +91,10 @@
         "Message:\n$message\n";
 
     // Send email
-    $header = "Reply-To: $visitor_email \r\n";
-    mail($to,$email_subject,$email_body,$header);
+    $headers = "From: no-reply@carlislestudentproperties.co.uk\r\n";
+    $headers .= "Reply-To: $visitor_email\r\n";
+
+    mail($to, $email_subject, $email_body, $headers);
 
     // Navigate to homepage
     echo '<script type="text/javascript">', 'location.href = "index.html?vr=1";', '</script>';
