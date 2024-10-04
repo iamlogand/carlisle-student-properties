@@ -31,12 +31,12 @@
       src="https://www.googletagmanager.com/gtag/js?id=UA-192896830-1"
     ></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
+      window.dataLayer = window.dataLayer || []
       function gtag() {
-        dataLayer.push(arguments);
+        dataLayer.push(arguments)
       }
-      gtag("js", new Date());
-      gtag("config", "UA-192896830-1");
+      gtag("js", new Date())
+      gtag("config", "UA-192896830-1")
     </script>
     <!-- Google reCAPTCHA-->
     <script src="https://www.google.com/recaptcha/api.js?render=6LfV6pIdAAAAAK8-djX_oOXhzAKStbRhcWT5rKQe"></script>
@@ -44,14 +44,14 @@
     <script src="script.js"></script>
     <!-- Tracking-->
     <script type="text/javascript">
-      (function () {
-        var hstc = document.createElement("script");
+      ;(function () {
+        var hstc = document.createElement("script")
         hstc.src =
-          "https://log.hitsteps.net/track.php?code=f1a5bb9d02c0ffc6dd3f005f351540d3";
-        hstc.async = true;
-        var htssc = document.getElementsByTagName("script")[0];
-        htssc.parentNode.insertBefore(hstc, htssc);
-      })();
+          "https://log.hitsteps.net/track.php?code=f1a5bb9d02c0ffc6dd3f005f351540d3"
+        hstc.async = true
+        var htssc = document.getElementsByTagName("script")[0]
+        htssc.parentNode.insertBefore(hstc, htssc)
+      })()
     </script>
     <noscript
       ><a href="http://www.hitsteps.com/"
@@ -72,10 +72,10 @@
     <div w3-include-html="includes/prop-announcement-header.html"></div>
     <!--	Title-->
     <div class="container mt-3 mb-3">
-      <!-- <h1>42 Bowman Street <span class="badge badge-info">Available</span></h1> -->
-      <h1>
+      <h1>42 Bowman Street <span class="badge badge-info">Available</span></h1>
+      <!-- <h1>
         42 Bowman Street <span class="badge badge-secondary">Reserved</span>
-      </h1>
+      </h1> -->
     </div>
     <!-- Photos-->
     <div class="container px-0 px-md-3">
@@ -241,17 +241,16 @@
             class="btn btn-primary btn-block"
             data-toggle="modal"
             data-target="#viewing-modal"
-            disabled
           >
-            Arrange Viewing (Reserved)
+            Arrange Viewing
           </button>
         </div>
       </div>
     </div>
     <!-- Info-->
     <div class="container mt-3">
-      <h3>42 Bowman Street CA1 2HR</h3>
-      <!-- <h5>3 Rooms at £95, £100 and £100 per week including all bills</h5> -->
+      <!-- <h3>42 Bowman Street CA1 2HR</h3> -->
+      <h5>3 Rooms Available at £110, £115 and £115 per week including all bills</h5>
       <hr />
       <p>
         3 double bedroom student house near Fusehill Street Campus. Modern
@@ -317,7 +316,7 @@
       </div>
       <!-- Google Maps scripting -->
       <script>
-        ((g) => {
+        ;((g) => {
           var h,
             a,
             k,
@@ -326,32 +325,32 @@
             l = "importLibrary",
             q = "__ib__",
             m = document,
-            b = window;
-          b = b[c] || (b[c] = {});
+            b = window
+          b = b[c] || (b[c] = {})
           var d = b.maps || (b.maps = {}),
             r = new Set(),
             e = new URLSearchParams(),
             u = () =>
               h ||
               (h = new Promise(async (f, n) => {
-                await (a = m.createElement("script"));
-                e.set("libraries", [...r] + "");
+                await (a = m.createElement("script"))
+                e.set("libraries", [...r] + "")
                 for (k in g)
                   e.set(
                     k.replace(/[A-Z]/g, (t) => "_" + t[0].toLowerCase()),
                     g[k]
-                  );
-                e.set("callback", c + ".maps." + q);
-                a.src = `https://maps.${c}apis.com/maps/api/js?` + e;
-                d[q] = f;
-                a.onerror = () => (h = n(Error(p + " could not load.")));
-                a.nonce = m.querySelector("script[nonce]")?.nonce || "";
-                m.head.append(a);
-              }));
+                  )
+                e.set("callback", c + ".maps." + q)
+                a.src = `https://maps.${c}apis.com/maps/api/js?` + e
+                d[q] = f
+                a.onerror = () => (h = n(Error(p + " could not load.")))
+                a.nonce = m.querySelector("script[nonce]")?.nonce || ""
+                m.head.append(a)
+              }))
           d[l]
             ? console.warn(p + " only loads once. Ignoring:", g)
-            : (d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)));
-        })({ key: "AIzaSyAZxhQYFDMvh96WOI3zOjSc21Ll5FxTkiQ", v: "weekly" });
+            : (d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)))
+        })({ key: "AIzaSyAZxhQYFDMvh96WOI3zOjSc21Ll5FxTkiQ", v: "weekly" })
       </script>
     </div>
     <!-- Viewing Modal-->
@@ -497,9 +496,10 @@
             href="https://www.facebook.com/Carlislestudentproperties"
           >
             <img
-              src="https://facebookbrand.com/wp-content/uploads/2019/04/f_logo_RGB-Hex-Blue_512.png?w=512&h=512"
+              src="./images/facebook-logo.png"
               alt="Find us on Facebook"
               width="30"
+              style="margin-top: -5px"
             />
             Find us on Facebook
           </a>
@@ -529,7 +529,7 @@
     </div>
     <!-- HTML include-->
     <script>
-      includeHTML();
+      includeHTML()
     </script>
     <!-- reCAPTCHA script-->
     <script>
@@ -539,32 +539,32 @@
             action: "homepage",
           })
           .then(function (token) {
-            document.getElementById("g-recaptcha-response").value = token;
-            document.getElementById("request-page").value = "42 Bowman page";
-          });
-      });
+            document.getElementById("g-recaptcha-response").value = token
+            document.getElementById("request-page").value = "42 Bowman page"
+          })
+      })
     </script>
     <!-- Google Maps scripting -->
     <script>
       async function initMap(location) {
-        let position = { lat: 54.88950113966089, lng: -2.9215176031977745 };
-        const { Map } = await google.maps.importLibrary("maps");
+        let position = { lat: 54.88950113966089, lng: -2.9215176031977745 }
+        const { Map } = await google.maps.importLibrary("maps")
         const { AdvancedMarkerElement } = await google.maps.importLibrary(
           "marker"
-        );
+        )
         map = new Map(document.getElementById("map"), {
           zoom: 14,
           center: position,
           mapId: "MAP_ID",
-        });
+        })
         const marker = new AdvancedMarkerElement({
           map: map,
           position: position,
           title: "Property",
-        });
+        })
       }
 
-      initMap();
+      initMap()
     </script>
     <!-- jQuery, Popper, Bootstrap, includeHTML-->
     <script
